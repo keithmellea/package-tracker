@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action='' method="post">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.sender.label}}
+            {{ form.sender() }}
+        </p><p>
+            {{ form.recipient.label}}
+            {{ form.recipient() }}
+        </p>
+        <p>
+            {{ form.origin.label}}
+            {{ form.origin() }}
+        </p>
+        <p>
+            {{ form.destination.label}}
+            {{ form.destination() }}
+        </p>
+        <p>
+            {{ form.express_shipping.label}}
+            {{ form.express_shipping() }}
+        </p>
+        <p>
+            {{ form.submit()}}
+        </p>
+        <p>
+            {{ form.cancel()}}
+        </p>
+    </form>
+</body>
+</html>
