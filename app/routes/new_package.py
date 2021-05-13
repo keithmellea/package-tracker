@@ -7,5 +7,6 @@ bp = Blueprint('new_package', __name__, url_prefix='/new_package')
 def new_package():
     form = PackageForm()
     if form.validate_on_submit():
+         print(form.data)
          return redirect(url_for("root.root"))
     return render_template('shipping_request.html', form=form)
